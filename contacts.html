@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RealSec</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+        }
+
+        .contact-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/AvadhB.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.8;
+            padding: 180px 0 100px;
+            color: white;
+            text-align: center;
+            margin-top: 0;
+            /* background-color: #1f2937; */
+        }
+
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .contact-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-info h2 {
+            color: var(--text-color);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-info h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: var(--light-bg);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .contact-text h3 {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-form h2 {
+            color: var(--text-color);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .contact-form h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+        }
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/AvadhB-removebg-preview.png" alt="RealSec Logo"></a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <h1>Get in Touch</h1>
+        <p>Have questions about our services? We're here to help and ready to serve your security needs.</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">
+                            <h3>Phone Numbers</h3>
+                            <p>+91 9082380089</p>
+                            <p>+91 8977911395</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>info@avadhabusiness.com</p>
+                            <p>radhakrishna@avadhbusiness.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <div class="contact-text">
+                            <h3>Office Address</h3>
+                            <h4>Admin Office</h4>
+                            <p>C-9, Globe Estate, Unit No. 206,Vikas Naka, MIDC Phase-I, Beside Khambal Pada, Dombivli (E).421 203</p>
+                            <h4>Branch Office</h4>
+                            <p>165/C, Vengalrao Nagar,
+                                Near S R Nagar Metro
+                                Sation, S R Nagar,
+                                Hyderabad
+                                Telangana - 500038</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form action="https://formspree.io/f/xvgayega" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="locate-us" class="locate-us">
+        <div class="section-header">
+            <h2>Locate Us</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="map-container">
+            <div class="map-frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15069.655793784705!2d73.115086!3d19.220783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7952135db7661%3A0x1337db62c7ef7a26!2sREAL%20SECURITY%20SERVICES%20I%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sus!4v1747913703845!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Avadh Business Services I Pvt Ltd</h3>
+                <p>Your Trusted Partner in Electrical & Infrastructure Solutions</p>
+                <div class="footer-contact">
+                    <p><i class="fas fa-phone"></i>+91 9082380089 | +91 8977911395</p>
+                    <p><i class="fas fa-envelope"></i> info@avadhabusiness.com</p>
+                    <p><i class="fas fa-location-dot"></i> C-9, Globe Estate, Unit No. 206,Vikas Naka, MIDC Phase-I, Beside Khambal Pada, Dombivli (E).421 203</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Avadh Business Services I Pvt Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RealSec</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+            --nav-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        /* header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--nav-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        } */
+
+        /* nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        } */
+
+        /* .logo img {
+            height: 40px;
+            width: auto;
+        } */
+/* 
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        } */
+
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/AvadhB.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.8;
+            padding: 180px 0 100px;
+            color: white;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .about-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+            background: #f8fafc;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-content {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .about-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-grid + .service-grid {
+            margin-top: 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .infrastructure-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            margin-top: 40px;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+
+        .infra-item {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            flex: 0 0 300px;
+            scroll-snap-align: start;
+        }
+
+        .infra-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .infra-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .infra-item h3 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .infra-item p {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: #1a56db;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            color: #111827;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        } */
+
+        
+
+        /* nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        } */
+
+        /* nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        } */
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            /* nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            } */
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav a {
+                display: block;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/AvadhB-removebg-preview.png" alt="RealSec Logo"></a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="about-hero">
+        <h1>About Us</h1>
+        <p>Powering Progress with Reliable and Innovative Electrical & Infrastructure Solutions Solutions .
+            At ABSIPL, we deliver safe, efficient, and cutting-edge electrical services that support India’s growing infrastructure needs.</p>
+    </div>
+
+    <section class="section">
+        <div class="section-container">
+            <!-- Story and Mission -->
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Our Story</h2>
+                    <img src="At the office-pana (1).svg" alt="Office illustration" class="about-svg">
+                    <p>At Avadh Business Services I Pvt Ltd, our mission is to deliver exceptional electrical contracting solutions that meet the evolving needs of modern infrastructure. Established in July 2022, we have earned a strong reputation across India for our reliability, technical expertise, and commitment to safety. We are dedicated to staying at the forefront of the industry by embracing innovative technologies and best practices, ensuring timely, cost-effective, and high-quality project execution. Our goal is to consistently exceed client expectations while upholding the highest standards of professionalism and safety.</p>
+                </div>
+            
+                <div class="about-content">
+                    <h2>Our Mission</h2>
+                    <img src="Business mission-pana (1).svg" alt="Office illustration" class="about-svg">
+                    <p>Our vision is to build lasting relationships by consistently delivering reliable services that truly meet the needs of our clients. We believe that the quality of our work speaks for itself and will continue to define our reputation for years to come. Through unwavering commitment to excellence, we aim to be a trusted name in the electrical contracting industry—valued not just for what we do, but for how we do it.</p>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="section-content">
+                <div class="section-title">
+                    <h2>Our Values</h2>
+                    <p class="section-subtitle">Core principles that guide our commitment to excellence</p>
+                </div>
+                <!-- <div class="service-grid">
+                    <div class="service-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security First</h3>
+                        <p>We prioritize security in everything we do, ensuring the highest standards of protection for our clients.</p>
+                    </div> -->
+                  
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safety</h3>
+                        <p>We prioritize the health and safety of our people, partners, and clients in every project we undertake.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Respect</h3>
+                        <p>We foster a culture of mutual respect, valuing diverse perspectives and treating everyone with dignity.</p>
+                    </div>
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Responsiveness</h3>
+                        <p>We are committed to listening, adapting, and acting promptly to meet our clients' needs.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Creativity</h3>
+                        <p>We embrace innovation and continuously seek better ways to deliver effective and efficient solutions.</p>
+                    </div>
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Integrity</h3>
+                        <p>We conduct our business with honesty, transparency, and the highest ethical standards.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-flag"></i>
+                        <h3>Initiative</h3>
+                        <p>We empower our team to take ownership, be proactive, and drive positive change.</p>
+                    </div>
+                </div>
+                <!-- <div class="service-grid">
+                    <div class="service-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Teamwork</h3>
+                        <p>We believe that collaboration and shared goals are key to achieving excellence.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Infrastructure Section -->
+            <!-- <div class="section-content">
+                <div class="section-title">
+                    <h2>Our Infrastructure Expertise</h2>
+                    <p class="section-subtitle">Comprehensive solutions for modern infrastructure needs</p>
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <i class="fas fa-university"></i>
+                        <h3>ATM & Bank Infrastructure</h3>
+                        <p>Complete turnkey solutions including civil work, electrical systems, and security integration for ATM installations.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>EHV Substation Construction</h3>
+                        <p>State-of-the-art construction and maintenance of Extra High Voltage substations with optimal performance.</p>
+                    </div>
+                </div>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <i class="fas fa-store"></i>
+                        <h3>Retail Outlet Construction</h3>
+                        <p>Specialized in developing modern retail spaces with a focus on structural integrity and enhanced shopping experience.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-hard-hat"></i>
+                        <h3>Skilled Manpower Outsourcing</h3>
+                        <p>Deployment of trained professionals for substation operations, maintenance, and management services.</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Avadh Business Services I Pvt Ltd</h3>
+                <p>Your Trusted Partner in Electrical & Infrastructure Solutions</p>
+                <div class="footer-contact">
+                    <p><i class="fas fa-phone"></i>+91 9082380089 | +91 8977911395</p>
+                    <p><i class="fas fa-envelope"></i> info@avadhabusiness.com</p>
+                    <p><i class="fas fa-location-dot"></i> C-9, Globe Estate, Unit No. 206,Vikas Naka, MIDC Phase-I, Beside Khambal Pada, Dombivli (E).421 203</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Avadh Business Services I Pvt Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
