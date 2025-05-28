@@ -224,6 +224,52 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoplay();
     }
 
+    // Client Carousel
+    const clientCarousel = document.querySelector('.client-carousel');
+    if (clientCarousel) {
+        const slider = clientCarousel.querySelector('.client-slider');
+        const slides = slider.querySelectorAll('.client-slide');
+        const prevBtn = clientCarousel.querySelector('.prev');
+        const nextBtn = clientCarousel.querySelector('.next');
+
+        let currentPosition = 0;
+        const slideWidth = 200; // Width of each slide including gap
+        const totalSlides = slides.length;
+        const visibleSlides = Math.floor(slider.offsetWidth / slideWidth);
+        const maxPosition = -(totalSlides - visibleSlides) * slideWidth;
+
+        function updateCarousel() {
+            slider.style.transform = `translateX(${currentPosition}px)`;
+            prevBtn.style.opacity = currentPosition === 0 ? '0.5' : '1';
+            nextBtn.style.opacity = currentPosition <= maxPosition ? '0.5' : '1';
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPosition < 0) {
+                currentPosition = Math.min(currentPosition + slideWidth, 0);
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPosition > maxPosition) {
+                currentPosition = Math.max(currentPosition - slideWidth, maxPosition);
+                updateCarousel();
+            }
+        });
+
+        // Initialize
+        updateCarousel();
+
+        // Update on window resize
+        window.addEventListener('resize', () => {
+            const newVisibleSlides = Math.floor(slider.offsetWidth / slideWidth);
+            const newMaxPosition = -(totalSlides - newVisibleSlides) * slideWidth;
+            currentPosition = Math.max(currentPosition, newMaxPosition);
+            updateCarousel();
+        });
+    }
+
     // Close menu when window is resized to desktop size
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
