@@ -845,6 +845,162 @@ header {
 
  
 
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, var(--primary-color), #2563eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), #2563eb);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-card i {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, var(--primary-color), #2563eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.feature-card:hover i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    /* margin-bottom: 0; */
+    color: #1a202c;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.feature-card:hover h3 {
+    color: var(--primary-color);
+}
+
+.feature-card p {
+    color: #4a5568;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .why-choose-us {
+        padding: 4rem 1.5rem;
+    }
+
+    .why-choose-us h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem auto;
+    }
+
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .feature-card i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-choose-us {
+        padding: 3rem 1rem;
+    }
+
+    .why-choose-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .feature-card {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .feature-card i {
+        font-size: 2.8rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+    }
+}
+
 /* Industries Section */
 .industries {
     padding: 5rem 1rem;
