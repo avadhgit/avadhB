@@ -16,11 +16,11 @@
 
         .contact-hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/AvadhB.jpeg');
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            opacity: 0.8;
-            padding: 180px 0 100px;
+            /* opacity: 0.8; */
+            padding: 250px 0 250px;
             color: white;
             text-align: center;
             margin-top: 0;
@@ -112,6 +112,73 @@
             color: #666;
             line-height: 1.6;
         }
+        
+        .services-heading-wrapper {
+  text-align: center;
+  margin-top: 0rem;
+  margin-bottom: 4rem;
+}
+
+.services-title {
+  font-size: 3rem;
+  color: #1f2937;
+  display: inline-block;
+  position: relative;
+  animation: fadeSlideUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background-color: #3b82f6; /* blue-500 */
+  border-radius: 2px;
+  animation: underlineGrow 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes underlineGrow {
+  to {
+    opacity: 1;
+  }
+}
+
+
+        .services-title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -8px;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 4px;
+        background-color: #3b82f6; /* Tailwind's blue-500 */
+        border-radius: 2px;
+        animation: underlineGrow 1s ease-out 0.5s forwards;
+        opacity: 0;
+        }
+
+        @keyframes underlineGrow {
+        to {
+            width: 60%;
+            opacity: 1;
+        }
+        }
+
+
 
         .contact-form {
             background: white;
@@ -186,29 +253,31 @@
         }
 
         .social-links {
-            margin-top: 30px;
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: var(--light-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-3px);
-        }
+        position: absolute;
+        top: 1rem;
+        /* left: 1rem; */
+        right: 1rem;
+        display: flex;
+        gap: 1.5rem;
+      }
+      
+      .social-links a {
+        color: #000080;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+      }
+      
+      .social-links a:hover {
+        color: var(--accent-color, #0056b3);
+        background: white;
+      }
 
         @media (max-width: 768px) {
             .contact-container {
@@ -246,11 +315,14 @@
     </header>
 
     <section class="contact-hero">
-        <h1>Get in Touch</h1>
-        <p>Have questions about our services? We're here to help and ready to serve your security needs.</p>
+        <!-- <h1>Get in Touch</h1>
+        <p>Have questions about our services? We're here to help and ready to serve your security needs.</p> -->
     </section>
 
     <section class="contact-section">
+        <div class="services-heading-wrapper">
+            <p class="services-title">Contact Us</p>
+          </div> 
         <div class="contact-container">
             <div class="contact-info">
                 <h2>Contact Information</h2>
@@ -276,11 +348,12 @@
                         <div class="contact-text">
                             <h3>Office Address</h3>
                             <h4>Admin Office</h4>
-                            <p>C-9, Globe Estate, Unit No. 206,Vikas Naka, MIDC Phase-I, Beside Khambal Pada, Dombivli (E).421 203</p>
+                            <p>C-9, Globe Estate, Unit No. 206,Vikas Naka, MIDC Phase-I, Beside Khambal Pada,Dombivli (E).421203,Maharashtra</p>
                             <h4>Branch Office</h4>
-                            <p>64-A, Maa Karni Nagar , Ghandhy Path West, Vaishali Nagar ,Jaipur, Rajasthan</p>
+                            <p>64-A, Maa Karni Nagar , Ghandhy Path West, Vaishali Nagar,Jaipur, Rajasthan</p>
                             <p>633/02 Ground Floor Gahmar Kunj Kanchanpur Matiyari Lucknow-
-                                226019 Lucknow</p>
+                                226019,Uttar Pradesh</p>
+                            <p>Punnavilakath veedu vadakkum bhagam kashakottam - 695022,Thrissur,Kerala</p>
                         </div>
                     </div>
                 </div>
@@ -317,21 +390,15 @@
         </div>
     </section>
 
-    <section id="locate-us" class="locate-us">
-        <div class="section-header">
-            <h2>Locate Us</h2>
-            <div class="underline"></div>
-        </div>
-        <div class="map-container">
-            <div class="map-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15069.655793784705!2d73.115086!3d19.220783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7952135db7661%3A0x1337db62c7ef7a26!2sREAL%20SECURITY%20SERVICES%20I%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sus!4v1747913703845!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
     <footer>
         <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#home">
+                  <img src="images/AvadhB-removebg-preview.png" alt="Avadh Logo" />
+                </a>
+              </div>
             <div class="footer-info">
-                <h3>AVADH BUSINESS SERVICES I PVT LTD</h3>
+                <!-- <h3>AVADH BUSINESS SERVICES I PVT LTD</h3> -->
                 <!-- <p>Your Trusted Partner in Electrical & Infrastructure Solutions</p> -->
                 <div class="footer-contact">
                     <p><i class="fas fa-phone"></i>+91 9082380089 | +91 8655945165</p>

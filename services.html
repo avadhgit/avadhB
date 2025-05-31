@@ -16,11 +16,11 @@
 
         .services-hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/AvadhB.jpeg');
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            opacity: 0.8;
-            padding: 180px 0 100px;
+            /* opacity: 0.8; */
+            padding: 250px 0 250px;
             color: white;
             text-align: center;
             margin-top: 0;
@@ -55,13 +55,74 @@
             margin-bottom: 20px;
             font-weight: 700;
         }
+        
+        .services-heading-wrapper {
+  text-align: center;
+  margin-top: 0rem;
+  margin-bottom: 4rem;
+}
 
-        .section-title p {
-            font-size: 1.2rem;
-            color: #6b7280;
-            max-width: 600px;
-            margin: 0 auto;
+.services-title {
+  font-size: 3rem;
+  color: #1f2937;
+  display: inline-block;
+  position: relative;
+  animation: fadeSlideUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background-color: #3b82f6; /* blue-500 */
+  border-radius: 2px;
+  animation: underlineGrow 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes underlineGrow {
+  to {
+    opacity: 1;
+  }
+}
+
+
+        .services-title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -8px;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 4px;
+        background-color: #3b82f6; /* Tailwind's blue-500 */
+        border-radius: 2px;
+        animation: underlineGrow 1s ease-out 0.5s forwards;
+        opacity: 0;
         }
+
+        @keyframes underlineGrow {
+        to {
+            width: 60%;
+            opacity: 1;
+        }
+        }
+
+
+
 
         .service-item {
             display: flex;
@@ -289,17 +350,21 @@
     </header>
 
     <div class="services-hero">
-        <h1>Infrastructure Services</h1>
-        <p>Comprehensive construction and infrastructure solutions tailored to meet your specific requirements with excellence and precision.</p>
+        <!-- <h1>Infrastructure Services</h1>
+        <p>Comprehensive construction and infrastructure solutions tailored to meet your specific requirements with excellence and precision.</p> -->
     </div>
 
     <div class="service-section">
+        <div class="services-heading-wrapper">
+            <p class="services-title">Our Services</p>
+          </div>          
         <div class="container">
             <!-- <div class="section-title">
                 <h2>Infrastructure Services</h2>
                 <p>Comprehensive construction and infrastructure solutions tailored to meet your specific requirements with excellence and precision.</p>
             </div> -->
             <!-- ATM Infrastructure -->
+            
             <div class="service-item">
                 <div class="service-image">
                     <div class="image-gallery">
@@ -332,6 +397,8 @@
                 </div>
                 <div class="service-content">
                     <h3>Total Implementation Services (TIS) for ATM Banking Operation</h3>
+                    <h4>"Secure. Seamless. Smart Banking Infrastructure."</h4>
+                    <p></p>
                     <p>We provide end-to-end Total Implementation Services (TIS) for ATM deployment and integration.
                         Our service covers site preparation, hardware installation, software configuration, and network setup.
                         We ensure seamless connectivity with core banking systems and real-time transaction processing.
@@ -411,12 +478,10 @@
                     </div>
                 </div>
                 <div class="service-content">
-                    <h3>Telecom Electrical & Infrastructure</h3>
-                    <p>We offer comprehensive electrical substation and line construction services from planning to commissioning.
-                        Our work begins with site selection, detailed design, and regulatory approvals.
-                        We handle the complete construction, equipment installation, and system integration.
-                        Our substations ensure efficient transformation and distribution of electricity across regions.
-                        With a focus on safety, reliability, and compliance, we deliver turnkey power infrastructure solutions</p>
+                    <h3>Telecom,Electrical & Infrastructure</h3>
+                    <h4>"Integrated Solutions in Energy, Telecom & Infrastructure – Delivered with Precision and Passion."</h4>
+                    <p></p>
+                    <p>We provide end-to-end solutions in electrical substations, telecom and infrastructure development, and solar energy systems. Our expertise spans installation, operation, and maintenance, ensuring seamless performance across all services. With a focus on innovation, reliability, and safety, we power projects that shape a sustainable and connected future.</p>
                     <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -454,6 +519,8 @@
                 </div>
                 <div class="service-content">
                     <h3>Retail Outlet Construction Services </h3>
+                    <h4>"Built for Business. Designed for Impact"</h4>
+                    <p></p>
                     <p>We specialize in constructing and renovating retail outlets tailored to your brand and business needs.
                         Our services include site preparation, interior fit-outs, and installation of lighting, HVAC, and security systems.
                         We ensure efficient space planning while adhering to all building codes and safety regulations.
@@ -496,6 +563,8 @@
                 </div>
                 <div class="service-content">
                     <h3>Skilled Manpower Outsourcing</h3>
+                    <h4>"Skilled Hands. Smart Minds. Reliable Results"</h4>
+                    <p></p>
                     <p>We provide highly trained and experienced skilled manpower across various industries to meet your project needs.
                         Our workforce is equipped with the expertise to perform tasks efficiently, safely, and to the highest standards.
                         We support sectors such as construction, manufacturing, energy, and IT with qualified professionals.
@@ -606,13 +675,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <footer>
         <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#home">
+                  <img src="images/AvadhB-removebg-preview.png" alt="Avadh Logo" />
+                </a>
+              </div>
+            
             <div class="footer-info">
-                <h3>AVADH BUSINESS SERVICES I PVT LTD</h3>
-                <p>Your Trusted Partner in Electrical & Infrastructure Solutions</p>
+                <!-- <h3>AVADH BUSINESS SERVICES I PVT LTD</h3> -->
+                <!-- <p>Your Trusted Partner in Electrical & Infrastructure Solutions</p> -->
                 <div class="footer-contact">
-                    <p><i class="fas fa-phone"></i>+91 9082380089 | +91 8655945165</p>
-                    <p><i class="fas fa-envelope"></i> info@avadhabusiness.com</p>
-                    <p><i class="fas fa-location-dot"></i> C-9, Globe Estate, Unit No. 206,Vikas Naka, MIDC Phase-I, Beside Khambal Pada, Dombivli (E).421 203</p>
+                    <p><i class="fas fa-phone"> </i>+91 9082380089 | +91 8655945165</p>
+                    <p><i class="fas fa-envelope"> </i> info@avadhabusiness.com</p>
+                    <p><i class="fas fa-location-dot"> </i> C-9, Globe Estate, Unit No. 206,Vikas Naka, MIDC Phase-I, Beside Khambal Pada, Dombivli (E).421 203</p>
                 </div>
             </div>
             <div class="social-links">
