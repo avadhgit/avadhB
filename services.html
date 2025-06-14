@@ -160,17 +160,21 @@
             display: flex;
             align-items: center;
             margin-bottom: 120px;
-            gap: 60px;
+            gap: 40px;
             background: white;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 20px;
         }
 
         .service-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+            box-shadow: 0 25px 50px rgba(37,99,235,0.15);
+        }
+        .service-item:hover .gallery-item img {
+            transform: scale(1.02);
         }
 
         .service-item:nth-child(even) {
@@ -181,19 +185,26 @@
             flex: 1;
             position: relative;
             overflow: hidden;
+            border-radius: 15px;
+            margin: 10px;
+            transition: all 0.3s ease;
         }
 
         .image-gallery {
             position: relative;
             width: 100%;
-            height: 500px;
+            height: 800px;
             overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(37,99,235,0.1);
+            background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
         }
 
         .gallery-container {
             display: flex;
             transition: transform 0.5s ease;
             height: 100%;
+            border-radius: 15px;
         }
 
         .gallery-item {
@@ -205,6 +216,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.5s ease;
         }
 
         .gallery-nav {
@@ -276,12 +289,13 @@
         }
 
         .service-content h3 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 25px;
             color: var(--text-color);
             font-weight: 700;
             position: relative;
-            padding-bottom: 15px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
 
         .service-content h3::after {
@@ -295,11 +309,19 @@
             border-radius: 2px;
         }
 
+        .service-content h4 {
+            font-size: 1.3rem;
+            font-style: italic;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
         .service-content p {
             font-size: 1.1rem;
+            color: #4a5568;
             line-height: 1.8;
-            color: #4b5563;
             margin-bottom: 30px;
+            letter-spacing: 0.01em;
         }
 
         .service-content .learn-more {
@@ -335,7 +357,7 @@
             }
 
             .service-image img {
-                height: 400px;
+                height: 300px;
             }
         }
 
@@ -402,15 +424,15 @@
                     <div class="image-gallery">
                         <div class="gallery-container">
                             <div class="gallery-item">
-                                <img src="images/Atm.webp" alt="ATM Infrastructure 1">
+                                <img src="images/ATMContatless.webp" alt="ATM Infrastructure 1">
                                 <div class="image-overlay"></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="images/Bank-1.png" alt="ATM Infrastructure 2">
+                                <img src="images/Atm.webp" alt="ATM Infrastructure 2">
                                 <div class="image-overlay"></div>
                             </div>
                             <div class="gallery-item">
-                                <img src="images/Bank-2.png" alt="ATM Infrastructure 3">
+                                <img src="images/Bank-1.png" alt="ATM Infrastructure 3">
                                 <div class="image-overlay"></div>
                             </div>
                         </div>
@@ -430,12 +452,39 @@
                 <div class="service-content" id = "TISforATMBankingOperation">
                     <h3>Total Implementation Services (TIS) for ATM Banking Operation</h3>
                     <h4>"Secure. Seamless. Smart Banking Infrastructure."</h4>
-                    <p></p>
-                    <p>We provide end-to-end Total Implementation Services (TIS) for ATM deployment and integration.
-                        Our service covers site preparation, hardware installation, software configuration, and network setup.
-                        We ensure seamless connectivity with core banking systems and real-time transaction processing.
-                        Our TIS includes robust security features, compliance checks, and remote monitoring capabilities.
-                        As a trusted service provider, we deliver reliable, scalable, and efficient ATM banking solutions.</p>
+                    <p>
+                        <br><b style="color:var(--primary-color);font-size:20px">🏦 ATM Site Implementation</b><br>
+                        Site Survey & Feasibility Analysis
+                        Civil, Electrical & Interior Works for ATM Sites
+                        ATM Room Fabrication, Branding & Signage
+                        UPS, Battery & Electrical Panel Installation
+                        End-to-End Site Commissioning (Onsite & Offsite ATMs)
+                        We handle turnkey development of ATM sites — from concept to commissioning — with fast deployment across metro, semi-urban, and rural zones.
+                        
+                        <br><b style="color:var(--primary-color);font-size:20px">🏦 Banking Infrastructure Development</b><br>
+                        Branch Setup (Civil, Electrical & Interiors)
+                        Cash Recycler & Self-Service Kiosk Setup
+                        Network Cabling & Server Room Establishment
+                        Site Renovation, Branding & Front Office Interiors
+                        Modular Furniture, Workstations & Lighting Solutions
+                        We develop modern, secure, and efficient banking environments tailored to branch requirements with an emphasis on ergonomics, aesthetics, and technology.
+                        
+                        <br><b style="color:var(--primary-color);font-size:20px">🔒 Banking Security & Power Solutions</b><br>
+                        CCTV, Access Control & Intrusion Alarm Systems
+                        Strong Room Construction as per RBI Guidelines
+                        Fire Detection & Suppression Systems
+                        DG Set Supply, Installation & AMC
+                        V-SAT, Router & Connectivity Setup
+                        Our solutions ensure regulatory compliance, uninterrupted operations, and high-security environments for branches and ATM sites.
+
+                        <br><b style="color:var(--primary-color);font-size:20px">🛠️ Operations & Maintenance (O&M)</b><br>
+                        Preventive & Breakdown Maintenance
+                        First-Line & Second-Line ATM Support
+                        Facility Management for Bank Branches
+                        Field Engineering Support & 24x7 Helpdesk
+                        Vendor & Asset Lifecycle Management
+                        We enable efficient banking operations through proactive maintenance and SLA-driven support for both banking outlets and ATM networks.
+                        </p>
                     <a href="contacts.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -512,8 +561,32 @@
                 <div class="service-content" id = "TelecomElectricalInfrastructure">
                     <h3>Telecom,Electrical & Infrastructure</h3>
                     <h4>"Integrated Solutions in Energy, Telecom & Infrastructure – Delivered with Precision and Passion."</h4>
-                    <p></p>
-                    <p>We provide end-to-end solutions in electrical substations, telecom and infrastructure development, and solar energy systems. Our expertise spans installation, operation, and maintenance, ensuring seamless performance across all services. With a focus on innovation, reliability, and safety, we power projects that shape a sustainable and connected future</p>
+                    <p>
+                        <br><b style="color:var(--primary-color);font-size:20px">⚡ Electrical Power Infrastructure</b><br>
+
+                        Substation Construction (up to 400 kV)
+                        Transformer Augmentation & Upgrades
+                        Transmission Line Construction
+                        HT/LT Panel Installation & Cabling
+                        Solar Power Systems & Integration
+                        We deliver turnkey electrical solutions, ensuring seamless execution from design to commissioning with a focus on reliability, safety, and compliance.
+                       
+                       <br><b style="color:var(--primary-color);font-size:20px">📡 Telecom Infrastructure</b><br>
+                       
+                        Mobile Tower Erection (GBT/RTP)
+                        OFC Laying & Splicing
+                        Shelter & Battery Bank Installations
+                        Network Operations & Maintenance (NOC & Field Services)
+                        5G & Small Cell Site Implementation
+                        Our telecom vertical supports rapid rollout and maintenance of high-performance communication networks across urban and remote regions.
+                       
+                       <br><b style="color:var(--primary-color);font-size:20px">🏗️ Civil & Core Infrastructure</b><br>
+                       Commercial & Institutional Building Construction
+                       Telecom Shelter & Equipment Foundations
+                       Infrastructure for Substations, DG Rooms, and Control Rooms
+                       Utility Support Structures & Site Development
+                       Turnkey EPC Project Execution
+                       We provide robust infrastructure solutions with timely execution and quality assurance, supporting clients in power, telecom, and industrial sectors.</p>
                     <a href="contacts.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -552,12 +625,38 @@
                 <div class="service-content" id = "RetailOutletConstruction">
                     <h3>Retail Outlet Construction </h3>
                     <h4>"Built for Business. Designed for Impact"</h4>
-                    <p></p>
-                    <p>We specialize in constructing and renovating retail outlets tailored to your brand and business needs.
-                        Our services include site preparation, interior fit-outs, and installation of lighting, HVAC, and security systems.
-                        We ensure efficient space planning while adhering to all building codes and safety regulations.
-                        Our team creates functional, attractive, and customer-friendly retail environments.
-                        From concept to completion, we deliver high-quality, turnkey retail construction solutions.</p>
+                    <p>
+                        <br><b style="color:var(--primary-color);font-size:20px">🏗️ Retail Outlet Civil Construction</b><br>
+                        Site Development & Earthwork
+                        Retail Outlet Building (Sales Room, Store, Canopy, Toilet Blocks)
+                        Driveway & Forecourt Construction (with Paver/Concrete finishes)
+                        Underground Tank Installation & Fuel Dispensing Infrastructure
+                        Structural Steel Fabrication (Roof, Canopy, Signage Poles)
+                        We execute end-to-end civil works tailored to oil marketing companies (OMCs), EV stations, and branded retail formats — ensuring speed, safety, and compliance.
+                    
+                        <br><b style="color:var(--primary-color);font-size:20px">⚡ Electrical & Mechanical Works</b><br>
+                        LT Panel Installation, Wiring & Cabling
+                        LED Lighting Systems for Canopy, Store & Forecourt
+                        Earthing, Lightning Protection & Energy Meters
+                        Pump Motor, Dispenser & Automation Integration
+                        DG Set, UPS & Battery Backup Solutions
+                        We ensure efficient and safe power distribution systems for smooth, 24/7 operations at retail and fueling stations.
+                        
+                        <br><b style="color:var(--primary-color);font-size:20px">🧱 Retail Interior Fit-Outs & Branding</b><br>
+                        Flooring, False Ceiling, and Painting
+                        Modular Furniture & Display Units
+                        Branding, Signage, Vinyl Wraps & Façade Design
+                        HVAC Systems, Exhausts & Glass Partitions
+                        Customer Waiting Area, Washroom, and Pantry Setups
+                        We provide aesthetically functional interiors with a focus on customer experience and brand consistency across all outlets.
+
+                        <br><b style="color:var(--primary-color);font-size:20px">🔧 Support Infrastructure & Maintenance</b><br>
+                        Borewell, Water Supply & Drainage Systems
+                        Firefighting Systems & Safety Signage
+                        CCTV, Networking & Access Control
+                        Preventive Maintenance & Renovation Work
+                        AMC for Electrical & Civil Assets
+                        Our infrastructure services extend beyond construction — ensuring your outlet remains functional, compliant, and well-maintained throughout its lifecycle</p>
                     <a href="contacts.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -597,11 +696,37 @@
                     <h3>Skilled Manpower Outsourcing</h3>
                     <h4>"Skilled Hands. Smart Minds. Reliable Results"</h4>
                     <p></p>
-                    <p>We provide highly trained and experienced skilled manpower across various industries to meet your project needs.
-                        Our workforce is equipped with the expertise to perform tasks efficiently, safely, and to the highest standards.
-                        We support sectors such as construction, manufacturing, energy, and IT with qualified professionals.
-                        Our services help boost productivity, ensure quality output, and reduce operational downtime.
-                        Partner with us for reliable, flexible, and performance-driven manpower solutions.</p>
+                    <p>
+                        <br><b style="color:var(--primary-color);font-size:20px">👷Technical & Engineering Manpower</b><br>
+                        Electrical Engineers, EHV Line Technicians, and Substation Operators
+                        Telecom Technicians, OFC Splicers & BTS Riggers
+                        HVAC Technicians, Pump Operators, and Utility Maintenance Staff
+                        Site Engineers & Project Supervisors (Civil, Electrical, Telecom)
+                        CAD Operators, Surveyors & Safety Officers
+                        We deploy technically trained professionals certified to work in high-performance, safety-sensitive environments across power, telecom, and infrastructure projects.
+                            
+                        <br><b style="color:var(--primary-color);font-size:20px">🏢 Banking & Administrative Support</b><br>
+                        ATM Custodians, FLM/SLM Engineers
+                        Cash Van Guards, Branch Facility Operators
+                        Data Entry Operators, MIS Executives, and Back-office Staff
+                        Branch-level Technical Support Staff
+                        Document Verification & Loan Processing Assistants
+                        Our skilled banking workforce ensures smooth operations and customer service across ATM networks and branch infrastructure.
+                        
+                        <br><b style="color:var(--primary-color);font-size:20px">🛠️ O&M and Facility Management Staff</b><br>
+                        Electricians, Plumbers, Welders, and Masons
+                        Housekeeping, Security, and Front Desk Executives
+                        DG Operators, Lift Technicians & Utility Handlers
+                        Facility Managers & AMC Support Teams
+                        Multi-skilled Technicians for Remote Site Maintenance        
+                        We offer end-to-end manpower outsourcing with real-time monitoring, rotation, and compliance — reducing HR load and ensuring uninterrupted operations.
+                        
+                        <br><b style="color:var(--primary-color);font-size:20px">📦 Logistics, Retail & Field Services</b><br>
+                        Warehouse Operators, Inventory Handlers, Delivery Staff
+                        Petrol Pump Attendants, Forecourt Supervisors & Fuel Technicians
+                        Retail Billing, POS Operators & Storekeepers
+                        Customer Care Agents, Field Collection & Verification Staff  
+                        We provide ready-to-deploy manpower for high-turnover sectors like fuel retailing, FMCG, logistics, and field service operations.</p>
                     <a href="contacts.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -719,7 +844,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="footer-contact">
                     <p><i class="fas fa-phone"> </i>+91 9082380089 | +91 8655945165</p>
                     <p><i class="fas fa-envelope"> </i> info@avadhabusiness.com</p>
-                    <p><i class="fas fa-location-dot"> </i> C-9, Globe Estate, Unit No. 206,Vikas Naka, MIDC Phase-I, Beside Khambal Pada, Dombivli (E).421 203</p>
+                    <p><i class="fas fa-location-dot"> </i> C-9, Globe Estate, Unit No. 206,Vikas Naka, MIDC Phase-I,Dombivli (E) Thane, Maharashtra - 421 203</p>
                 </div>
             </div>
             <div class="social-links">
