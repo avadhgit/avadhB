@@ -357,8 +357,15 @@
             }
 
             .service-image img {
-                height: 300px;
+                height: 100%;
             }
+            /* .gallery-container {
+                display: flex;
+                height: 100%;
+            } */
+            /* .image-gallery {
+                height: 80%;
+            } */
         }
 
         @media (max-width: 768px) {
@@ -373,6 +380,7 @@
 
             .service-image img {
                 height: 300px;
+                width: 100%;
             }
 
             .service-content {
@@ -382,6 +390,16 @@
             .service-content h3 {
                 font-size: 1.8rem;
             }
+
+            .gallery-container {
+                display: flex;
+                height: 50%;
+            }
+            .image-gallery {
+                height: 50%;
+            }
+            
+            
         }
     </style>
 </head>
@@ -849,7 +867,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
                 <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
